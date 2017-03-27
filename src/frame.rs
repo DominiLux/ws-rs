@@ -473,7 +473,7 @@ payload: 0x{}
     }
 }
 
-fn try_read_buf<B : MutBuf>(source: &mut Cursor<Vec<u8>>, buf: &mut B) -> io::Result<Option<usize>> {
+fn try_read_buf<B : BufMut>(source: &mut Cursor<Vec<u8>>, buf: &mut B) -> io::Result<Option<usize>> {
     // Reads the length of the slice supplied by buf.mut_bytes into the buffer
     // This is not guaranteed to consume an entire datagram or segment.
     // If your protocol is msg based (instead of continuous stream) you should
