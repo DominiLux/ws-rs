@@ -108,7 +108,7 @@ impl Stream {
         }
     }
 
-    pub fn try_read_buf<B : MutBuf>(&mut self, buf: &mut B) -> io::Result<Option<usize>>
+    pub fn try_read_buf<B : BufMut>(&mut self, buf: &mut B) -> io::Result<Option<usize>>
         where Self : Sized
     {
         // Reads the length of the slice supplied by buf.mut_bytes into the buffer
