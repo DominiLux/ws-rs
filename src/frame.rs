@@ -1,3 +1,5 @@
+extern crate bytes;
+
 use std::fmt;
 use std::mem::transmute;
 use std::io::{self, Cursor, Read, Write};
