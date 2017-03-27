@@ -1,10 +1,8 @@
-extern crate bytes;
-
 use std::io;
 use std::io::{Read, Write};
 use std::net::SocketAddr;
-
-use bytes::{Buf, MutBuf};
+extern crate bytes;
+use bytes::{Bytes, BytesMut, Buf, BufMut};
 use mio::tcp::TcpStream;
 #[cfg(feature="ssl")]
 use openssl::ssl::SslStream;
