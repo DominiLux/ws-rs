@@ -5,7 +5,6 @@ use std::default::Default;
 use std::iter::FromIterator;
 
 use rand;
-extern crate bytes;
 use bytes::{Bytes, BytesMut, Buf, BufMut};
 use result::{Result, Error, Kind};
 use protocol::{OpCode, CloseCode};
