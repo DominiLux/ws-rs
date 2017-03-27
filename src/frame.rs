@@ -1,5 +1,3 @@
-extern crate bytes;
-
 use std::fmt;
 use std::mem::transmute;
 use std::io::{self, Cursor, Read, Write};
@@ -7,7 +5,8 @@ use std::default::Default;
 use std::iter::FromIterator;
 
 use rand;
-use bytes::MutBuf;
+extern crate bytes;
+use bytes::{Bytes, BytesMut, Buf, BufMut};
 use result::{Result, Error, Kind};
 use protocol::{OpCode, CloseCode};
 
